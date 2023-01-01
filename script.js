@@ -1,5 +1,5 @@
 
-function validate(event,callback) {
+function validate(callback) {
     let uname = document.getElementById("Username").value;
   let pword = document.getElementById("Password").value;
     if (uname == "admin" && pword == "12345") {
@@ -9,11 +9,12 @@ function validate(event,callback) {
     else{
        event.preventDefault();
          if (uname!= "admin"){
-       callback('uerror')
+            callback('uerror')
     }
-      if(pword!="12345"){
-        callback('perror')
+         if(pword!="12345"){
+           callback('perror')
     }
+    alert("invalid credentials")
     return false
 }
 }
