@@ -7,7 +7,6 @@ function validate(callback) {
         return true
     }
     else{
-       event.preventDefault();
          if (uname!= "admin"){
             callback('uerror')
     }
@@ -72,7 +71,7 @@ function error(val){
       });
   
       promise.then(
-          function(){
+          function(count){
               console.log(count);
               alert("Congrats. 5 Tasks have been Successfully Completed");
           },
